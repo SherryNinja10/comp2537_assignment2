@@ -1,0 +1,26 @@
+<%- include('templates/header', { title, homeClass, homeExtraAttributes, memberClass, memberExtraAttributes, adminClass, adminExtraAttributes }) %>
+
+<div class="container mt-5">
+  <h1>Admin Dashboard</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <%- include('templates/user', { user }) %>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+
+<%- include('templates/footer', {}) %>
+
+</body>
+</html>

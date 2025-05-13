@@ -1,0 +1,78 @@
+<%- include('templates/header', { title, homeClass, homeExtraAttributes, memberClass, memberExtraAttributes, adminClass, adminExtraAttributes }) %>
+
+<div class="container mt-5">
+  <h1>Sign Up</h1>
+  <form action="/signup" method="POST">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="username" 
+        name="username" 
+        placeholder="Enter your username" 
+        required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input 
+        type="email" 
+        class="form-control" 
+        id="email" 
+        name="email" 
+        placeholder="name@example.com" 
+        required
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input 
+        type="password" 
+        class="form-control" 
+        id="password" 
+        name="password" 
+        placeholder="Create a password" 
+        required
+      >
+    </div>
+
+    <fieldset class="mb-3">
+      <legend class="col-form-label pt-0">Role</legend>
+      <div class="form-check">
+        <input 
+          class="form-check-input" 
+          type="radio" 
+          name="role" 
+          id="roleMember" 
+          value="member" 
+          checked
+        >
+        <label class="form-check-label" for="roleMember">
+          Member
+        </label>
+      </div>
+      <div class="form-check">
+        <input 
+          class="form-check-input" 
+          type="radio" 
+          name="role" 
+          id="roleAdmin" 
+          value="admin"
+        >
+        <label class="form-check-label" for="roleAdmin">
+          Admin
+        </label>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>
+
+<%- include('templates/footer', {}) %>
+
+</body>
+</html>
