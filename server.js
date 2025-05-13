@@ -72,7 +72,7 @@ function requireLogin(req, res, next) {
 
 function requireAdmin(req, res, next) {
   if (req.session.user_type !== 'admin') {
-    return res.status(403).redirect('/');
+    return res.status(403).redirect('/loginpage');
   }
   next();
 }
